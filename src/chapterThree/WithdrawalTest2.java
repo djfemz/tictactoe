@@ -14,7 +14,7 @@ public class WithdrawalTest2 {
 
         System.out.print("Enter deposit amount for firstAccount: ");
         double depositAmount = withdrawalAmount.nextDouble();
-        System.out.printf("%nadding to firstNumber balance%f%n", depositAmount);
+        System.out.printf("%n adding to firstNumber balance %.0f %n", depositAmount);
 
         firstAccount.deposit(depositAmount);
         displayAccount(firstAccount);
@@ -22,7 +22,7 @@ public class WithdrawalTest2 {
        double depositAmount2 = withdrawalAmount.nextDouble();
 
 
-       System.out.printf("%n adding to secondNumber balance%f%n", depositAmount2);
+       System.out.printf("%n adding to secondNumber balance %.0f%n", depositAmount2);
         secondAccount.deposit(depositAmount2);
         displayAccount(secondAccount);
 
@@ -40,10 +40,10 @@ displayAccount(firstAccount);
     }
     public static void displayAccount (Withdrawal firstAccount) {
 
-        System.out.printf("%s balance: #%.2f%n", firstAccount.getName(), firstAccount.getBalance());
+        System.out.printf("%s balance: #%.0f%n", firstAccount.getName(), firstAccount.getBalance());
     }
     public static void displayAccount2 (Withdrawal secondAccount){
-            System.out.printf("%s balance: #%.2f%n", secondAccount.getName(), secondAccount.getBalance());
+            System.out.printf("%s balance: #%.0f%n", secondAccount.getName(), secondAccount.getBalance());
         }
 
 }

@@ -32,29 +32,34 @@ public class Television {
         return 0;
     }
 
-    public void changeChannelForward() {
+    public void increaseChannel() {
         if(isOn){if (channel < 10) channel++; }
 
     }
 
-    public void changeChannelBackward() {
-        if(isOn){ if (channel > 1) channel--;}
-    }
-//
-//    public int increaseChannel(int channelNumber) {
-//        if (isOn)if (channelNumber <= 10) {return channelNumber;}
-//        return channel;
-//    }
+    public void decreaseChannel() {
 
-    public int increaseChannel(int channelNumber) {
-        if
-            (isOn){ if (channelNumber <= 10){
-                // return channel++;
-            channel = channelNumber;
-            return channel;
-        }
-
-        }
-        return 0;
+        if(isOn){
+            if (channel > 1) channel--;}
     }
+
+
+    public void setChannel(int channelNumber) {
+        if(isOn) {
+            if (channelNumber <= 10) {
+                channel = channelNumber;
+
+            }
+        }
+    }
+    public String toString(){
+        String Television = " ";
+        Television += "Tv is "+ (isOn()? "on": "off") +"\n";
+        Television += "Volume is "+ getVolume() + "\n";
+        Television += "Channel " + getChannel() + "\n";
+        return Television;
+    }
+
+
+
 }

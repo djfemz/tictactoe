@@ -9,7 +9,7 @@ public class GasMileageTest {
     @Test
     public void milesPerGallon(){
         GasMileage trip = new GasMileage();
-        double perTrip = trip. milesPerGallonOfTrip(25.0, 8.0);
+        double perTrip = trip.milesPerGallonOfTrip(25.0, 8.0);
         assertEquals(25.0/8.0, perTrip);
     }
 

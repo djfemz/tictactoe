@@ -5,8 +5,9 @@ import java.util.Objects;
 public class Account {
     private String name;
     private int balance =50_000;
-
     private String pin;
+
+
     public Account(String accountName, String accountPin) {
     name = accountName;
     pin = accountPin;
@@ -26,6 +27,7 @@ public class Account {
     }
 
     public void withdrawAmount(int withdrawalAmount, String accountPin) {
-        if (withdrawalAmount > 0 && withdrawalAmount < balance && Objects.equals(pin, accountPin)) balance -=withdrawalAmount;
+        if (withdrawalAmount > 0 && withdrawalAmount < balance && Objects.equals(pin, accountPin))
+            balance -=withdrawalAmount;
     }
 }

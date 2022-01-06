@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class TelevisionTest {
+public class  TelevisionTest {
 
 
     @Test
@@ -146,13 +146,13 @@ public class TelevisionTest {
         assertEquals(1, lG.getChannel());
 
         for(int i=0; i <9 ; i++ ){
-        lG.changeChannelForward();
+        lG.increaseChannel();
         }
         assertEquals(10, lG.getChannel());
 
-            lG.changeChannelBackward();
-            lG.changeChannelBackward();
-            lG.changeChannelBackward();
+            lG.decreaseChannel();
+            lG.decreaseChannel();
+            lG.decreaseChannel();
 
         assertEquals(7, lG.getChannel());
     }
@@ -167,18 +167,18 @@ public class TelevisionTest {
         assertEquals(1, lG.getChannel());
 
         for(int i=0; i <9 ; i++ ){
-            lG.changeChannelForward();
+            lG.increaseChannel();
         }
         assertEquals(10, lG.getChannel());
-        lG.changeChannelForward();
+        lG.increaseChannel();
         assertEquals(10, lG.getChannel());
 
 
         for (int i = 10; i > 1; i--) {
-            lG.changeChannelBackward();
+            lG.decreaseChannel();
         }
         assertEquals(1, lG.getChannel());
-        lG.changeChannelBackward();
+        lG.decreaseChannel();
         assertEquals(1, lG.getChannel());
     }
 
@@ -189,10 +189,8 @@ public class TelevisionTest {
         lG.turnOn();
         assertTrue(lG.isOn());
 
-        //lG.getChannel();
-        //assertEquals(1, lG.getChannel());
 
-        lG.increaseChannel(8);
-        assertEquals(8, lG.increaseChannel(8));
+        lG.setChannel(8);
+        assertEquals(8, lG.getChannel());
     }
 }
