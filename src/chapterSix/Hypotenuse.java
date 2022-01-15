@@ -30,4 +30,38 @@ while (a != 0);
        double hypotenus= Math.sqrt (Math.pow(sideA, 2) + Math.pow(sideB,2));
        return hypotenus;
     }
+
+    public static class ConversionTest {
+        public static void main(String[] args) {
+            TemperatureConversion convert = new TemperatureConversion();
+            String conversionOption = """
+                    Press 1 to convert to Kelvin
+                    Press 2 to convert to Celsius
+                    Press 3 to exit
+                    """;
+            System.out.println(conversionOption);
+            Scanner input = new Scanner(System.in);
+            int select = input.nextInt();
+    try {
+        switch (select) {
+            case 1 -> {
+                System.out.println("Enter the number in Celsius to be converted to Kelvin ");
+                int number = input.nextInt();
+                convert.setKelvin(number);
+                System.out.printf("The number is %.2f Kelvin", convert.getKelvin());
+            }
+            case 2 -> {
+                System.out.println("Enter the number in Celsius to be converted to Kelvin ");
+                int number = input.nextInt();
+                convert.setCelsius(number);
+                System.out.printf("The number is %.2f degree celsius ", convert.getCelsius());
+            }
+            case 3 -> System.exit(0);
+        }
+    }
+    catch (ArithmeticException e){
+        System.out.println("Invalid Option " + e);
+    }
+        }
+    }
 }

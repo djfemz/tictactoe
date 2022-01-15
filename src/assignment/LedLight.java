@@ -6,8 +6,8 @@ public class LedLight {
    private static final int [] [] array = new int [5][4];
 
     public static void main(String[] args) {
-userInput();
-outputArray(array);
+        userInput();
+        outputArray(array);
     }
     public static void userInput() {
         Scanner input = new Scanner(System.in);
@@ -58,7 +58,6 @@ outputArray(array);
 
     public static void outputArray(int[][] array) {
         for (int i = 0; i < array.length; i++) {
-
             for (int j = 0; j < array[i].length; j++) {
                 if (array[i][j] == 0){
                     System.out.print(" ");

@@ -26,8 +26,7 @@ public class Factorial {
 
     }
     public static void calculateExponentialFactorial(){
-//        int factorial = 1;
-//        int total = 0;
+
 
         Scanner input = new Scanner(System.in);
         System.out.println("Enter a number to get the factorial the factorial exponent: ");

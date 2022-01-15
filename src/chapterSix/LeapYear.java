@@ -15,7 +15,6 @@ public class LeapYear {
         }
     }
     public static void leapYearCalculator(int number){
-       // int leapyear;
         if((number % 4 == 0 && number %100 != 0 ) || (number % 100 == 0 && number % 400 == 0))
         { System.out.println("It is a leap year");}
         else System.out.println("It is not a leap year");
