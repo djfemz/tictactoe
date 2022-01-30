@@ -16,7 +16,7 @@ public class SecondLargestNumber {
         int largestNumber = scanner.nextInt();
         int secondLargestNumber = Integer.MIN_VALUE;
         int count = 0;
-    while(count < 4) {
+    while(count < 9) {
         System.out.println("Enter a number");
         userInput = scanner.nextInt();
         if (userInput > largestNumber) {

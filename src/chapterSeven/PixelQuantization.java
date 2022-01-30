@@ -1,7 +1,5 @@
 package chapterSeven;
 
-import java.util.Arrays;
-
 public class PixelQuantization {
     public static void main(String[] args) {
 

@@ -29,24 +29,22 @@ public class Factorial {
 
 
         Scanner input = new Scanner(System.in);
-        System.out.println("Enter a number to get the factorial the factorial exponent: ");
-        int factorial = (int) input.nextDouble();
-        double result =0;
-        double total= 0;
-        double total2 = 1;
-         for (int i = 0; i <= factorial; i++ ){
-             if (i == 0){
-                total = total + 1;
-                continue;
-             }
-             int j = i;
-             while (j > 0){
-                 total2 = total2 * j;
-                 j--;
-             }
+        System.out.println("Enter a number to get the factorial  exponent: ");
+        int userInputCollector = (int) input.nextDouble();
+        int numerator = 1;
+        double result;
+        double total2 = 0;
+        for (int i = 1; i <=userInputCollector ; i++) {
+            double total= 1;
 
-             result = result + (1/total2);
-         }
-        System.out.println(result);
+            for (int j = 1; j <= i; j++) {
+                total *=j;
+            }
+            result = numerator/total;
+            total2 += result;
+        }
+        System.out.println(1 + total2);
+
+
     }
 }
