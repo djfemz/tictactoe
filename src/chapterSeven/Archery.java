@@ -42,7 +42,7 @@ public class Archery {
         String winners = "";
         for (int i = 0; i < sums.length; i++) {
             if (maximum == sums[i]){
-                winners += String.format("Player %d ", i+1);
+                winners   += String.format("Player %d ", i+1);
             }
         }
         return winners;

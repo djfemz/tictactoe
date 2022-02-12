@@ -10,9 +10,7 @@ public class ChristmasQuiz {
     private static final SecureRandom randomNumbers = new SecureRandom();
 
     public static void main(String[] args) {
-
         userQuestion();
-
     }
 
     public static void christmasQuestion(String [] array){
@@ -22,18 +20,13 @@ Scanner input =new Scanner(System.in);
         String [] selectionArray = new String[20];
 
         for(int i= 0; i < 5; i++){
-
-int j = randomNumbers.nextInt(20);
+        int j = randomNumbers.nextInt(20);
             System.out.println(count++ + " "+ array[j]);
-  selection = input.nextLine();
-
-
-//        for (int i =0; i < selectionArray.length; i++) {
+            selection = input.nextLine();
             selectionArray[j] = selection;
-           // System.out.println(selectionArray[j]);
         }
-compare(selectionArray,answers());
-    }
+            compare(selectionArray,answers());
+            }
     public static void userQuestion() {
         String[] array = new String[20];
         array[0] = """

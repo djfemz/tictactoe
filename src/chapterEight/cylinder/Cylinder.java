@@ -1,13 +1,9 @@
-package chapterEight;
+package chapterEight.cylinder;
 
-public class CylinderClass {
-    private int radius;
-    private int height;
+public class Cylinder {
+    private int radius = 1;
+    private int height = 1;
 
-    public CylinderClass(int radius, int height) {
-        this.radius = radius;
-        this.height = height;
-    }
 
     public int getRadius() {
         return radius;
@@ -27,8 +23,8 @@ public class CylinderClass {
         this.height = height;
     }
 
-    public int calculateVolumeOfACylinder(){
-        int volume = getRadius() * getHeight();
+    public double calculateVolumeOfACylinder(){
+        double volume = Math.PI * Math.pow(getRadius(),2) * getHeight();
         return volume;
     }
 
@@ -43,4 +39,5 @@ public class CylinderClass {
             throw new IllegalArgumentException("Height is below 1");
         }
     }
+
 }
