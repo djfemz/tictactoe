@@ -8,6 +8,7 @@ public class PlayTicTacGame {
     private static final TicTacToeBoard board = new TicTacToeBoard(array);
     private static Player player1;
     private static Player player2;
+    private static final int [] validatePosition = new int[8];
 
 
     private static final Scanner userChoice = new Scanner(System.in);
@@ -23,6 +24,8 @@ public class PlayTicTacGame {
         for (int i = 0; i < 4; i++) {
             System.out.println("Player1.... choose your position between 1 and 9");
             int position1 = userChoice.nextInt();
+            validatePosition[i] = position1;
+
             position1 = validate(position1);
             check(position1, player1.getPlayer());
             printBoard();
@@ -30,6 +33,7 @@ public class PlayTicTacGame {
             if (checkForOAndX(Cell.O)) return;
             System.out.println("Player2.... choose your position between 1 and 9");
             int position2 = userChoice.nextInt();
+           // validatePosition[i] = position2;
             position2 = validate(position2);
             check(position2, player2.getPlayer());
             printBoard();
@@ -39,6 +43,8 @@ public class PlayTicTacGame {
 
         }
     }
+
+
 
     private static void playerChoiceOfMarker() {
         System.out.println("Choose a marker (either X or O)");
